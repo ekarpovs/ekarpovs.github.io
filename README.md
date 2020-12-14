@@ -1,5 +1,3 @@
-# ekarpovs.github.io
-
-My personal website
+# My personal website
 
 Preview: ("https://ekarpovs.github.io")
