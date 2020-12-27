@@ -33,18 +33,12 @@
     <link rel="dns-prefetch" href="//fonts.googleapis.com/"> 
 
     <script src="https://kit.fontawesome.com/62915736e7.js" crossorigin="anonymous"></script>
-    <script src="https://www.google.com/recaptcha/api.js"></script>
+    <script src="https://www.google.com/recaptcha/api.js?render=6LdIuRYaAAAAAKQjexmUEMZFy9p6l3oHXOvB16a1"></script>
 
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Barlow+Condensed:300,400,600&amp;subset=latin-ext"> 
     <link rel="stylesheet" href="./assets/css/main.css"> 
   </head> 
   <body class="v-b">
-    <!-- <div id="overlay">
-      <div id="overlay-text">Under Construction</div>
-      <script>
-        document.getElementById("overlay").style.display = "block";
-      </script>
-    </div>    -->
     <header class="v-b container">
       <h1 class="v-b">My Github Page</h1>
     </header> 
@@ -72,32 +66,32 @@
               <label class="form-check-label small" for="consent">I've read the privacy policy and give my consent to handle the information I provided above</label> 
             </div> 
             <div class="text-center"> 
-              <!-- <div class="g-recaptcha" data-sitekey="6LdIuRYaAAAAAKQjexmUEMZFy9p6l3oHXOvB16a1" data-callback='onSubmit' data-badge="inline" data-size="invisible"></div>  -->
-              <button class="g-recaptcha" 
-                data-sitekey="6LdIuRYaAAAAAKQjexmUEMZFy9p6l3oHXOvB16a1" 
-                data-callback='onSubmit' 
-                data-action='submit'>Submit</button>
-              <!-- <button class="btn btn-primary">Send</button> -->
+              <button class="btn btn-primary">Send</button>
             </div> 
           </form> 
           <script> 
-            // window.scripts = window.scripts || []; 
-            // window.scripts = window.scripts.concat('https://www.google.com/recaptcha/api.js'); 
-            // document.getElementById("invisible-recaptcha-form").addEventListener("submit", function() { 
-            //   grecaptcha.reset(); 
-            //   grecaptcha.execute();
-            //   console.log("init")
-            // }, false); 
-
-            function onSubmit(token) { 
-              console.log("submit")
-              document.getElementById("invisible-recaptcha-form").submit(); 
+            function onClick(e) {
+              e.preventDefault();
+              grecaptcha.ready(function() {
+                grecaptcha.execute('6LdIuRYaAAAAAKQjexmUEMZFy9p6l3oHXOvB16a1', {action: 'submit'})
+                .then(function(token) {
+                    // Add your logic to submit to your backend server here.
+                  console.log("submit")
+                  document.getElementById("invisible-recaptcha-form").submit(); 
+                });
+              });
             }
           </script> 
         </section>
       </aside>
       <section class="v-b container projects">
         <h2 class="v-b">Projects</h2>
+        <div id="overlay">
+          <div id="overlay-text">Under Construction</div>
+          <script>
+            document.getElementById("overlay").style.display = "block";
+          </script>
+        </div>   
       </section>
     </main>
     <footer class="v-b container"> 
