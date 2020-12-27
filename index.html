@@ -1,17 +1,93 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="assets/css/style.css" />
-    <title>Ekarpovs personal website</title>
-  </head>
-  <body>
-    <container id="home">
-      <div id="card">
-        <h1 id="tmp">Under construction</h1>
+<!DOCTYPE html> 
+<html lang="en"> 
+  <head> 
+    <meta charset="UTF-8"> 
+    <title>ekarpovs - home</title> 
+    <meta name="description" content="Evgeny Karpovsky, senior full-stack developer."/> 
+    <meta name="author" content="Evgeny Karpovsky (ekarpovs)" /> 
+    <link rel="canonical" href="https://ekarpovs.github.io/" /> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    
+    <meta property="og:title" content="Hi there!" /> 
+    <meta property="og:type" content="website"> 
+    <meta property="og:description" content="Evgeny Karpovsky, senior full-stack developer. />
+    <meta property="og:url" content="https://ekarpovs.github.io/" /> 
+    <meta property="og:site_name" content="Evgeny Karpovsky" /> 
+    
+    <meta property="og:image" content="https://ekarpovs.github.io/assets/img/facebook-og-image.png" /> 
+    <meta property="og:image:height" content="630" /> 
+    <meta property="og:image:width" content="1200" /> 
+    <meta property="og:image:type" content="image/png" /> 
+
+    <link rel="manifest" href="/site.webmanifest"> 
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png"> 
+
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png"> 
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png"> 
+    <link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+    <meta name="msapplication-TileColor" content="#da532c">
+    <meta name="theme-color" content="#ffffff">    
+
+    <link type="application/atom+xml" rel="alternate" href="https://ekarpovs.github.io/feed.xml" title="Evgeny Karpovsky (ekarpovs)" /> 
+
+    <link rel="dns-prefetch" href="//fonts.googleapis.com/"> 
+
+    <script src="https://kit.fontawesome.com/62915736e7.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Barlow+Condensed:300,400,600&amp;subset=latin-ext"> 
+    <link rel="stylesheet" href="./assets/css/main.css"> 
+  </head> 
+  <body class="v-b">
+    <div id="overlay">
+      <div id="overlay-text">Under Construction</div>
+      <script>
+        document.getElementById("overlay").style.display = "block";
+      </script>
+    </div>   
+    <header class="v-b container">
+      <h1 class="v-b">My Github Page</h1>
+    </header> 
+    <main class="v-b container">
+      <aside class="v-b container">
+        <section class="v-b container about">
+          <h2 class="v-b"> <strong>Evgeny Karpovsky,</strong></h2> 
+          <p class="info">A senior Fullstack software developer with extensive experience in developing complex enterprise-scale products.</p>
+        </section>
+        <section class="v-b container contact">
+          <h2 class="v-b">Have any questions? Mail me:</h2>
+          <form id="invisible-recaptcha-form" accept-charset="UTF-8" action="https://usebasin.com/f/8b726bcfcc06" method="POST"> 
+            <div class="form-group"> 
+              <input class="form-control" type="username" name="name" id="name" placeholder="Your name" required> 
+            </div> 
+            <div class="form-group"> 
+              <input class="form-control" type="email" name="email" id="email" placeholder="Your email address" required> 
+            </div> 
+            <div class="form-group"> 
+              <textarea class="form-control" rows="4" name="message" id="message" placeholder="Message" required></textarea> 
+            </div> 
+            <p class="mb-3"><a href="../policy/">Please read the privacy policy here!</a></p> 
+            <div class="mb-3 form-check"> 
+              <input class="form-check-input" type="checkbox" id="consent" required> 
+              <label class="form-check-label small" for="consent">I've read the privacy policy and give my consent to handle the information I provided above</label> 
+            </div> 
+            <div class="text-center"> 
+              <!-- <div class="g-recaptcha" data-sitekey="6Lew3SMUAAAAAJ82QoS7gqOTkRI_dhYrFy1f7Sqy" data-callback='onSubmit' data-badge="inline" data-size="invisible"></div>  -->
+              <button class="btn btn-primary">Send</button>
+            </div> 
+          </form> 
+    </section>
+      </aside>
+      <section class="v-b container projects">
+        <h2 class="v-b">Projects</h2>
+      </section>
+    </main>
+    <footer class="v-b container"> 
+      <p class="copy-right">Copyright &copy; 2020 Evgeny Karpovsky | All rights reserved</p>
+      <div class="social-link">
+        <p>Find me on:</p>
+        <a href="https://github.com/ekarpovs" target="_blank"><i class="fab fa-github fa-fw fa-2x"></i> </a>   
+        <a href="https://www.linkedin.com/in/Evgeny Karpovsky" target="_blank"><i class="fab fa-linkedin fa-fw fa-2x"></i></a> 
       </div>
-      <script src="assets/js/main.js"></script>
-    </container>
-  </body>
+    </footer> 
+</body> 
 </html>
+
