@@ -79,10 +79,8 @@
             function onClick(e) {
               e.preventDefault();
               grecaptcha.ready(function() {
-                grecaptcha.execute('6LdIuRYaAAAAAKQjexmUEMZFy9p6l3oHXOvB16a1', {action: 'submit'})
-                .then(function(token) {
+                grecaptcha.execute('6LdIuRYaAAAAAKQjexmUEMZFy9p6l3oHXOvB16a1', {action: 'submit'}).then(function(token) {
                     // Add your logic to submit to your backend server here.
-                  console.log("submit")
                   document.getElementById("invisible-recaptcha-form").submit(); 
                 });
               });
