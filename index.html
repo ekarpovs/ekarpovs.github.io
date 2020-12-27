@@ -33,16 +33,18 @@
     <link rel="dns-prefetch" href="//fonts.googleapis.com/"> 
 
     <script src="https://kit.fontawesome.com/62915736e7.js" crossorigin="anonymous"></script>
+    <script src="https://www.google.com/recaptcha/api.js"></script>
+
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Barlow+Condensed:300,400,600&amp;subset=latin-ext"> 
     <link rel="stylesheet" href="./assets/css/main.css"> 
   </head> 
   <body class="v-b">
-    <div id="overlay">
+    <!-- <div id="overlay">
       <div id="overlay-text">Under Construction</div>
       <script>
         document.getElementById("overlay").style.display = "block";
       </script>
-    </div>   
+    </div>    -->
     <header class="v-b container">
       <h1 class="v-b">My Github Page</h1>
     </header> 
@@ -70,11 +72,29 @@
               <label class="form-check-label small" for="consent">I've read the privacy policy and give my consent to handle the information I provided above</label> 
             </div> 
             <div class="text-center"> 
-              <!-- <div class="g-recaptcha" data-sitekey="6Lew3SMUAAAAAJ82QoS7gqOTkRI_dhYrFy1f7Sqy" data-callback='onSubmit' data-badge="inline" data-size="invisible"></div>  -->
-              <button class="btn btn-primary">Send</button>
+              <!-- <div class="g-recaptcha" data-sitekey="6LdIuRYaAAAAAKQjexmUEMZFy9p6l3oHXOvB16a1" data-callback='onSubmit' data-badge="inline" data-size="invisible"></div>  -->
+              <button class="g-recaptcha" 
+                data-sitekey="6LdIuRYaAAAAAKQjexmUEMZFy9p6l3oHXOvB16a1" 
+                data-callback='onSubmit' 
+                data-action='submit'>Submit</button>
+              <!-- <button class="btn btn-primary">Send</button> -->
             </div> 
           </form> 
-    </section>
+          <script> 
+            // window.scripts = window.scripts || []; 
+            // window.scripts = window.scripts.concat('https://www.google.com/recaptcha/api.js'); 
+            // document.getElementById("invisible-recaptcha-form").addEventListener("submit", function() { 
+            //   grecaptcha.reset(); 
+            //   grecaptcha.execute();
+            //   console.log("init")
+            // }, false); 
+
+            function onSubmit(token) { 
+              console.log("submit")
+              document.getElementById("invisible-recaptcha-form").submit(); 
+            }
+          </script> 
+        </section>
       </aside>
       <section class="v-b container projects">
         <h2 class="v-b">Projects</h2>
