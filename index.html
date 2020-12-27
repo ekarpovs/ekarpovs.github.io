@@ -71,18 +71,21 @@
               <input class="form-check-input" type="checkbox" id="consent" required> 
               <label class="form-check-label small" for="consent">I've read the privacy policy and give my consent to handle the information I provided above</label> 
             </div> 
-            <div class="text-center"> 
-              <button class="btn btn-primary">Send</button>
-            </div> 
           </form> 
+          <div class="text-center"> 
+            <button class="btn btn-primary" onclick="onClick()">Send</button>
+          </div> 
           <script> 
             function onClick(e) {
-              e.preventDefault();
+              // e.preventDefault();
               grecaptcha.ready(function() {
-                grecaptcha.execute('6LdIuRYaAAAAAKQjexmUEMZFy9p6l3oHXOvB16a1', {action: 'submit'}).then(function(token) {
+                grecaptcha.execute('6LdIuRYaAAAAAKQjexmUEMZFy9p6l3oHXOvB16a1', {action: 'submit'})
+                .then(function(token) {
                     // Add your logic to submit to your backend server here.
-                  document.getElementById("invisible-recaptcha-form").submit(); 
-                });
+                  form = document.getElementById("invisible-recaptcha-form");
+                  // console.log(form);
+                  form.submit();
+                })
               });
             }
           </script> 
