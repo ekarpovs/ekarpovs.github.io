@@ -38,6 +38,7 @@ main {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  /* flex-wrap: wrap; */
 }
 
 aside {
@@ -50,17 +51,17 @@ aside {
   flex-basis: 25%;   
 }
 
+.about {
+  border: 1px dotted red;
+}
 
 .about .info {
   margin: 0.5rem;
 }
 
 .contact {
-}
-
-cont-form {
-  margin: 0.5rem;
-}
+  border: 1px dotted red;
+  }
 
 #invisible-recaptcha-form .form-group {
   margin: 0.2rem;
@@ -116,6 +117,21 @@ footer > .social-link {
 
 
 /* Media querry */
+
+@media (max-width: 768px) {
+  :root,html {
+    font-size:16px
+  }
+
+  main {
+    flex-wrap: wrap;
+  }
+
+  aside {
+    flex-grow: 1;
+  }
+}
+
 /* @media (max-width: 1200px) {
   :root, html {
     font-size: 18px;
