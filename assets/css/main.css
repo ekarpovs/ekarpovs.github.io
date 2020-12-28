@@ -22,7 +22,7 @@ body {
 }
 
 header {
-
+  border: 1px solid green;
 }
 
 h1 {
@@ -38,14 +38,12 @@ main {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  /* justify-content: center; */
-  height: 90%;
-  width: 98%;
 }
 
 aside {
-  /* display: flex;
-  flex-direction: column; */
+  display: flex;
+  flex-direction: column;
+  justify-content:space-between;
   border: 1px dashed blue;
   flex-grow: 0;
   flex-shrink: 0;
@@ -58,18 +56,9 @@ aside {
 }
 
 .contact {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  flex-direction: column;
-  /* flex-grow: 0;
-  flex-shrink: 0;
-  flex-basis: 25%;    */
 }
 
 cont-form {
-  display: flex;
-  flex-direction: column;
   margin: 0.5rem;
 }
 
@@ -91,12 +80,12 @@ cont-form {
   display: flex;
   flex-direction: column;
   flex-grow: 1;
-  /* flex-shrink: 0;
-  flex-basis: 65%;  */
   border: 1px dashed blue;
+  width: 100vw;
+  height: 100vh;
 }
 
-.projects > h3 {
+.projects > h2 {
   flex-grow: 0;
   flex-shrink: 0;
   text-align: center;
@@ -104,6 +93,7 @@ cont-form {
 
 footer {
   font-size: 1.1rem;
+  border: 1px solid green;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
