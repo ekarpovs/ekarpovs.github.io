@@ -53,6 +53,7 @@ aside {
 
 .about {
   border: 1px dotted red;
+  /* flex-shrink: 1; */
 }
 
 .about .info {
@@ -61,12 +62,19 @@ aside {
 
 .contact {
   border: 1px dotted red;
-  }
+  /* flex-shrink: 1; */
+}
 
 #invisible-recaptcha-form .form-group {
   margin: 0.2rem;
 }
 
+#name {
+  width: 60%;
+}
+#email {
+  width: 80%;
+}
 #message {
   width: 100%;
 }
@@ -81,6 +89,7 @@ aside {
   display: flex;
   flex-direction: column;
   flex-grow: 1;
+  flex-shrink: 1;
   border: 1px dashed blue;
   width: 100vw;
   height: 100vh;
@@ -129,7 +138,27 @@ footer > .social-link {
 
   aside {
     flex-grow: 1;
+    flex-shrink: 2;
   }
+
+  .about {
+    flex-shrink: 1;
+  }
+
+  .contact {
+    flex-shrink: 1;
+  }
+
+  #name {
+    width: 65%;
+  }
+  #email {
+    width: 70%;
+  }
+  #message {
+    width: 80%;
+  }
+  
 }
 
 /* @media (max-width: 1200px) {
