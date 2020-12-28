@@ -33,7 +33,7 @@
     <link rel="dns-prefetch" href="//fonts.googleapis.com/"> 
 
     <script src="https://kit.fontawesome.com/62915736e7.js" crossorigin="anonymous"></script>
-    <script src="https://www.google.com/recaptcha/api.js?render=6LdIuRYaAAAAAKQjexmUEMZFy9p6l3oHXOvB16a1"></script>
+    <!-- <script src="https://www.google.com/recaptcha/api.js?render=6LdIuRYaAAAAAKQjexmUEMZFy9p6l3oHXOvB16a1"></script> -->
 
     <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Barlow+Condensed:300,400,600&amp;subset=latin-ext"> 
     <link rel="stylesheet" href="./assets/css/main.css"> 
@@ -43,12 +43,12 @@
       <h1 class="v-b">My Github Page</h1>
     </header> 
     <main class="v-b container">
-      <div id="overlay">
+      <!-- <div id="overlay">
         <div id="overlay-text">Under Construction</div>
         <script>
           document.getElementById("overlay").style.display = "block";
         </script>
-      </div>   
+      </div>    -->
       <aside class="v-b container">
         <section class="v-b container about">
           <h2 class="v-b"> <strong>Evgeny Karpovsky,</strong></h2> 
@@ -56,26 +56,29 @@
         </section>
         <section class="v-b container contact">
           <h2 class="v-b">Have any questions? Mail me:</h2>
-          <form id="invisible-recaptcha-form" accept-charset="UTF-8"> 
-            <div class="form-group"> 
+          <!-- Form -->
+          <!-- <form id="invisible-recaptcha-form" accept-charset="UTF-8" action="https://usebasin.com/f/8b726bcfcc06" method="POST">  -->
+            <form class="kwes-form cont-form" action="https://kwes.io/api/foreign/forms/so7ZqO6CDYNVsSvQ7ALC"> 
+              <div class="form-group"> 
               <input class="form-control" type="username" name="name" id="name" placeholder="Your name" required> 
-            </div> 
-            <div class="form-group"> 
-              <input class="form-control" type="email" name="email" id="email" value="test@gmail.com" placeholder="Your email address" required> 
-            </div> 
-            <div class="form-group"> 
-              <textarea class="form-control" rows="4" name="message" id="message" placeholder="Message" required></textarea> 
-            </div> 
-            <p class="mb-3"><a href="../policy/">Please read the privacy policy here!</a></p> 
-            <div class="mb-3 form-check"> 
-              <input class="form-check-input" type="checkbox" id="consent" required> 
-              <label class="form-check-label small" for="consent">I've read the privacy policy and give my consent to handle the information I provided above</label> 
-            </div> 
-          </form> 
-          <div class="text-center"> 
-            <button class="btn btn-primary" onclick="onClick()">Send</button>
-          </div> 
-          <script> 
+              </div> 
+              <div class="form-group"> 
+                <input class="form-control" type="email" name="email" id="email" value="test@gmail.com" placeholder="Your email address" required> 
+              </div> 
+              <div class="form-group"> 
+                <textarea class="form-control" rows="4" name="message" id="message" placeholder="Message" required></textarea> 
+              </div> 
+              <p id="priv"><a href="../policy/">Please read the privacy policy here!</a></p> 
+              <div class="form-check"> 
+                <input class="form-check-input" type="checkbox" name="agree" id="consent" required> 
+                <label class="form-check-label small" for="consent">I've read the privacy policy and give my consent to handle the information I provided above</label> 
+              </div> 
+              <button type="submit">Submit</button>
+            </form> 
+          <!-- <div class="text-center"> 
+            <button class="g-recaptcha" onclick="onClick()">Send</button>
+          </div>  -->
+          <!-- <script> 
             function onClick(e) {
               // e.preventDefault();
               grecaptcha.ready(function() {
@@ -89,14 +92,11 @@
                   // mess = document.getElementById("message");
                   // console.log(n.value, em.value, mess.value);
                   form.submit();
-                  console.log("sent");
-                })
-                .catch((e) => {
-                  console.log("error");
+                  // console.log("sent");
                 })
               });
             }
-          </script> 
+          </script>  -->
         </section>
       </aside>
       <section class="v-b container projects">
@@ -104,13 +104,14 @@
       </section>
     </main>
     <footer class="v-b container"> 
-      <p class="copy-right">Copyright &copy; 2020 Evgeny Karpovsky | All rights reserved</p>
+      <p class="copy-right">Copyright &copy; 2020 <strong>Evgeny Karpovsky</strong> | All rights reserved</p>
       <div class="social-link">
         <p>Find me on:</p>
         <a href="https://github.com/ekarpovs" target="_blank"><i class="fab fa-github fa-fw fa-2x"></i> </a>   
         <a href="https://www.linkedin.com/in/Evgeny Karpovsky" target="_blank"><i class="fab fa-linkedin fa-fw fa-2x"></i></a> 
       </div>
     </footer> 
+    <script src="https://kwes.io/v2/kwes-script.js" defer></script>
 </body> 
 </html>
 
