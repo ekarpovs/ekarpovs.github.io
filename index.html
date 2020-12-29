@@ -45,11 +45,15 @@
     <main class="container">
       <aside class=" container">
         <section class="container about">
-          <h3 class=""> <strong>Evgeny Karpovsky,</strong></h3> 
+          <header>
+            <h3 class=""> Evgeny Karpovsky,</h3> 
+          </header>
           <p class="info">A senior Fullstack software developer with extensive experience in developing complex enterprise-scale products.</p>
         </section>
         <section class="container contact">
-          <h3>Have any questions? Mail me:</h3>
+          <header>
+            <h3>Have any questions? Mail me:</h3>
+          </header>
           <!-- Form -->
           <form id="invisible-recaptcha-form" accept-charset="UTF-8" action="https://usebasin.com/f/8b726bcfcc06" method="POST"> 
             <div class="form-group"> 
@@ -76,13 +80,15 @@
               if (!ch)
                 return;
               form = document.getElementById("invisible-recaptcha-form");
-              form.submit();
+              // form.submit();
             }
           </script> 
         </section>
       </aside>
       <section class="container projects">
-        <h2 class="">Projects</h2>
+        <header>
+          <h2 class="">Projects</h2>
+        </header>
       </section>
     </main>
     <footer class=" container"> 
