@@ -100,6 +100,36 @@ aside {
   margin: 0.2rem;
 }
 
+#priv>a{
+  margin:.2em;
+  width: 100%;
+}
+
+.form-check{
+  margin: .4em .1em;
+  width: 100%;
+  display: flex;
+}
+
+.form-check .form-check-input{
+  margin-right: .5em;
+}
+
+.text-center .button{
+  margin: .5em .2em;
+  padding: .2em;
+  cursor: pointer;
+  width: 8em;
+  height: 2em;
+}
+
+#invisible-recaptcha-form .form-group textarea, 
+#invisible-recaptcha-form .form-group input{
+  padding: .8em;
+  width: 100%;
+}
+
+
 #name {
   width: 60%;
 }
