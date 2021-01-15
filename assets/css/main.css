@@ -1,221 +1,341 @@
-
+/* Variables */
 :root {
-  --clr-text: #5a5a5a;
-  --clr-primary: #067e0a;
-  --clr-accent: #764981;
+  --ff-title: "Crimson Text", serif;
+  --ff-text: "Roboto", sans-serif;
 
-  --ff-title: "BFNarrow", sans-serif;
-  --ff-serif: "Crimson Text", serif;
-  --ff-logo: "BetterFly", sans-serif;
+  --clr-text: #3d3d3d;
+  --clr-primary:  #555861;
+  --clr-nav: rgb(228, 215, 215);
+  --clr-bckgr-page: #30343F;
+  --clr-bckgr-section: rgb(230, 224, 221);
+  --clr-bckgr-topick: rgb(249, 247, 247);
+  --fs-400-mob: 0.75rem;
+  --fs-400: 1.125rem;
+  --fs-500: 1.25rem;
 }
 
+/* Box sizing rules */
 *,
 *::before,
 *::after {
   box-sizing: inherit;
 }
 
-html {
-  box-sizing: border-box;
-  font-family: var(--ff-serif);
-  color: var(--clr-text);
-  font-size: 1.125rem;
-  font-weight: 300;
-}
+/* Set core root defaults */
 
-
-/* Typography */
+/* remove default margin */
+body,
 h1,
 h2,
-h3 {
+h3,
+h4,
+p,
+ul {
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+/* body {
+  background: #f7f7f7;
+  color: #424242;  
+} */
+
+html {
+  box-sizing: border-box;
+  font-family: var(--ff-text);
+  font-size: var(--fs-500);
+  background-color: var(--clr-bckgr-page);
+  color: var(--clr-text);
+}
+
+/* make images easier to work with */
+img, 
+picture {
+  display: block;
+  max-width: 100%;
+}
+
+body {
+  padding: 0;
+}
+
+main {
+  padding: 0;
+}
+
+/* section {
+  padding: 2em 1em;
+} */
+
+/* Typography */
+
+h1,
+h2,
+h3,
+h4 {
   font-family: var(--ff-title);
   line-height: 0.8;
+  letter-spacing: 1px;
 }
 
 h1 {
-  font-size: 1.8rem;
+  font-size: 2.0rem;
+  padding-left: 0.5rem;
 }
 
 h2 {
-  font-size: 1.5rem;
+  font-size: 1.75rem;
 }
 
 h3 {
   font-size: 1.25rem;
 }
 
-/* Layout */
+p {
+  margin-bottom: 0.85em;
+}
 
-body {
-  border: 1px solid red;
-  background-color: lightgrey;
+p:last-child {
+  margin-bottom: 0;
+}
+
+.small {
+  font-size: 0.7em;
+}
+
+.text-primary {
+  color: var(--clr-primary);
+}
+
+.logo {
+  padding: 0.5em;
+}
+
+.section {
+  background-color: var(--clr-bckgr-section);   
   margin: 0;
-  padding: 0;
 }
 
-.container {
-  margin: 0.3rem; 
-  padding: 0.3rem; 
+.section-title {
+  padding: 0.5em;
 }
 
+.section-title-small {
+  font-size: 1.75rem;
+}
 
+.topick-accent {
+  box-shadow: 0 0 1em rgba(0, 0, 0, 0.5);
+  padding: 1em;
+}
+
+/* navigation */
 header {
-  border: 1px solid green;
-  text-align: center;
+  padding: 1em 0 1em;
 }
 
-main {
-  border: 1px solid green;
-  display: -webkit-box;
-  display: -ms-flexbox;
+nav ul {
+  font-size: var(--fs-400-mob);
   display: flex;
-  /* flex-wrap: wrap; */
+  list-style: none;
+  justify-content: space-around;
+  margin: 0 0.25em;
 }
 
-aside {
-  display: flex;
-  flex-direction: column;
-  justify-content:space-between;
-  border: 1px dashed blue;
-  flex-grow: 0;
-  flex-shrink: 0;
-  flex-basis: 25%;   
+nav a {
+  display: inline-block;
+  padding: 0.85em;
+  color: var(--clr-nav);
+  background-color: transparent;
+  text-decoration: none;
 }
 
-.about {
-  border: 1px dotted red;
-  /* flex-shrink: 1; */
+nav a:hover,
+a:focus {
+  text-decoration: underline; 
 }
 
-.about .info {
-  margin: 0.5rem;
-}
+/* buttons */
 
-.contact {
-  border: 1px dotted red;
-  /* flex-shrink: 1; */
-}
+/* Homepage styles */
 
-#invisible-recaptcha-form .form-group {
-  margin: 0.2rem;
-}
-
-#name {
-  width: 60%;
-}
-#email {
-  width: 80%;
-}
-#message {
-  width: 100%;
-}
-
-#priv {
-  margin: 0;
+.about__body {
+  background-color: var(--clr-bckgr-topick);   
+  margin: 0 0.5em;
 }
 
 .projects {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
+  gap: 0.5em;
   flex-direction: column;
-  flex-grow: 1;
-  flex-shrink: 1;
-  border: 1px dashed blue;
-  width: 100vw;
-  height: 100vh;
+  margin: 0 0.5em;
 }
 
-.projects > h2 {
-  flex-grow: 0;
-  flex-shrink: 0;
-  /* text-align: center; */
+.project {
+  background-color: var(--clr-bckgr-topick);
+   
+}
+
+.project__title {
+  color: var(--clr-primary);
+  font-size: 1.5rem;
+  margin-bottom: 0.5em;
+}
+
+.project__content {
+  padding: 0.5em;
+}
+
+.project__content p, li {
+  text-align: left;
+}
+
+.project__content ul {
+  padding-left: 2em;
+}
+
+.project-fine-print {
+  font-size: 0.75rem;
+  color: rgba(0, 0, 0, 0.55);
+  margin: 1em;
+}
+
+.contact {
+  padding: 0.5em 0 1em 0;
+}
+
+.contact__intro {
+  padding-bottom: 1em;
+}
+
+.contact__body {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: top;
+  gap: 0.5em;
+}
+
+.contact__form {
+  background-color: var(--clr-bckgr-topick);
+}
+
+.contact__form ::placeholder {
+  color: red;
+  opacity: 0.5;
+}
+
+.form-control {
+  width: 100%;
+  height: 2.5em;
+  margin: 0.5em 0;
+}
+
+.form-buttons {
+  display: flex;
+  justify-content: space-around;
+}
+
+.contact__policy {
+  background-color: var(--clr-bckgr-topick);
+}
+
+.policy__title {
+  color: red;
+  padding-bottom: 0.25em;
+}
+
+.policy__body {
+  margin 0;
+}
+
+.policy__body p {
+  text-align: left;
+  margin: 0;
 }
 
 footer {
-  font-size: 1.1rem;
-  border: 1px solid green;
-  display: -webkit-box;
-  display: -ms-flexbox;
+  color: var(--clr-nav);
   display: flex;
+  flex-direction: column;
   justify-content: space-between;
-  align-items: center;
+  padding: 1em 1em;
 }
 
-footer > .copy-right {
-  /* margin: 0.2rem; */
+
+.footer-copyright {
+  padding-top: 0.3em;
 }
 
-footer > .social-link {
-  display: -webkit-box;
-  display: -ms-flexbox;
+footer p {
+  margin: 0;
+}
+
+
+.footer-social {
+  font-size: var(--fs-400-mob);
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  /* margin: 0.5rem; */
+  justify-content: center;
+  margin-right: 1em;
+  padding-top: 0.4em;
+}
+
+.footer-social p {
+  padding: 0.25em;
+}
+
+.footer-social-links {
+  display: flex;
+  list-style: none;
+  margin-left: 1em;
+}
+
+.footer-social-links li {
+  margin-right: 0.5em;
+}
+
+.footer-social-links * {
+  color: rgb(192, 188, 188);
 }
 
 
-/* Media query */
-/* <320px, which is great for older small, low res phones */
-/* < 480px (which applies to older, smaller smartphone screen sizes) */
-/* < 768px, which is ideal for larger smartphones and smaller tablets */
-/* 768px, which applies for everything bigger such as large tablet screens and desktops screens. */
-/* 1024px stylesheet for wide screens on desktops. */
-
-/* Desktop-first approach */
-@media (max-width: 70em) {
-  :root,html {
-    font-size: 1em;
+/* Media query. Mobile first approach */
+@media only screen and (min-width: 750px) {
+  nav ul {
+    font-size: var(--fs-400);
   }
 
-  body {
-    width:auto;
+  nav a {
+    padding: 0.55em;
   }
 
-  main {
+  .hero {
+    padding: 40vh 1em;
+  }
+
+  .projects {
+    flex-direction: row;
     flex-wrap: wrap;
   }
 
-  aside {
+  .project {
     flex-grow: 1;
-    flex-shrink: 2;
+    flex-basis: 32%;
   }
 
-  .about {
-    flex-shrink: 1;
+  .contact__body {
+    flex-direction: row;
+    align-items: top;
   }
+      
 
-  .contact {
-    flex-shrink: 1;
-  }
-
-  #name {
-    width: 65%;
-  }
-  #email {
-    width: 70%;
-  }
-  #message {
-    width: 80%;
-  }
-  
   footer {
-    flex-direction: column;    
+    flex-direction: row;
   }
+
+  .footer-social {
+    justify-content: right;
+  } 
 }
 
-
-/* portrait */
-/* @media only screen 
-and (min-device-width: 768px) 
-and (max-device-width: 1024px) 
-and (orientation: portrait) {
-} */
-
-/* landscape */
-/* @media only screen 
-and (min-device-width: 768px) 
-and (max-device-width: 1024px) 
-and (orientation: landscape) {
-} */

@@ -33,72 +33,128 @@
     <link rel="dns-prefetch" href="//fonts.googleapis.com/"> 
 
     <script src="https://kit.fontawesome.com/62915736e7.js" crossorigin="anonymous"></script>
-    <!-- <script src="https://www.google.com/recaptcha/api.js?render=6LdIuRYaAAAAAKQjexmUEMZFy9p6l3oHXOvB16a1"></script> -->
 
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Barlow+Condensed:300,400,600&amp;subset=latin-ext"> 
-    <link rel="stylesheet" href="./assets/css/main.css"> 
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital@1&family=Montserrat&display=swap">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital@1&family=Montserrat:ital@0;1&display=swap">    
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat&family=Roboto&display=swap">    
+    <link rel="stylesheet" href="assets/css/main.css"> 
   </head> 
-  <body class="">
-    <header class=" container">
-      <h1 class="">My Github Page - STILL UNDER CONSTRUCTION!!!</h1>
-    </header> 
-    <main class="container">
-      <aside class=" container">
-        <section class="container about">
-          <header>
-            <h3 class=""> Evgeny Karpovsky,</h3> 
-          </header>
-          <p class="info">A senior Fullstack software developer with extensive experience in developing complex enterprise-scale products.</p>
-        </section>
-        <section class="container contact">
-          <header>
-            <h3>Have any questions? Mail me:</h3>
-          </header>
-          <!-- Form -->
-          <form id="invisible-recaptcha-form" accept-charset="UTF-8" action="https://usebasin.com/f/8b726bcfcc06" method="POST"> 
-            <div class="form-group"> 
-            <input class="form-control" type="username" name="username" id="name" placeholder="Your username" style="display: none;"><input class="form-control" type="username" name="name" id="name" placeholder="Your name" required> 
-            </div> 
-            <div class="form-group"> 
-              <input class="form-control" type="email" name="email" id="email" value="test@gmail.com" placeholder="Your email address" required> 
-            </div> 
-            <div class="form-group"> 
-              <textarea class="form-control" rows="4" name="message" id="message" placeholder="Message" required></textarea> 
-            </div> 
-            <p id="priv"><a href="../policy/">Please read the privacy policy here!</a></p> 
-            <div class="form-check"> 
-              <input class="form-check-input" type="checkbox" name="agree" id="consent" required> 
-              <label class="form-check-label small" for="consent">I've read the privacy policy and give my consent to handle the information I provided above</label> 
-            </div> 
-          </form> 
-          <div class="text-center"> 
-            <button class="button" onclick="onClick()" disabled>Send</button>
-          </div> 
-          <script> 
-            function onClick(e) {
-              ch = document.getElementById("consent").checked;
-              if (!ch)
-                return;
-              form = document.getElementById("invisible-recaptcha-form");
-              // form.submit();
-            }
-          </script> 
-        </section>
-      </aside>
-      <section class="container projects">
-        <header>
-          <h2 class="">Projects</h2>
+  <body>
+    <header>
+      <nav>
+        <ul>
+          <li class="logo"><img src="assets/img/logo-small.png" alt=""><a href=""></a></li>
+          <li><a href="#home">Home</a></li>
+          <li><a href="#projects">Projects</a></li>
+          <li><a href="#contact">Contact</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main>
+      
+      <section id="about" class="about section">
+        <header class="about__intro">
+          <h2 class="section-title-small text-primary">Hi,</h2>
         </header>
+        <div class="about__body topick-accent">
+          <p>Welcome to my personal site. It's part a portfolio, part a blog.</p>
+          <p>My name is Evgeny Karpovsky.</p> 
+          <p>I am a senior Full Stack developer with extensive experience in developing complex enterprise-scale products.</p>
+          <p>Over the past few years (~20), I've worked at BMS Software, - software company for enterprises.  During these years, I've developed parts of  Report Management and Workload Automation enterprise products. Info about the products you can find on the BMC Software site.</p>
+          <p>In the time, I've used many different program languages and technologies.</p>
+          <p>At present, I try new things on the Web, Image-processing, and CI/CD fields. On my site, I'll show how it's going.</p>
+        </div>
       </section>
+
+      <section id="projects" class="projects-showcase section">
+        <header>
+          <h2 class="section-title-small text-primary">Open Source Projects</h2>
+        </header>
+        <div class="projects">
+            <div class="project topick-accent">
+              <h3 class="project__title">Hyper-V Virtual Machine batch creator</h3>
+              <!-- <img src="assets/img/project.jpg" alt="pr" class="project__img"> -->
+              <div class="project__content">
+                <p>Set of Power Shell scripts for convert VMware Workstation/Oracle VM Virtualbox (ova.zip files) to Hyper-V Virtual Machine.</p>
+                <p>Includes following scripts:</p>
+                <ul>
+                  <li>unpack an ova.zip file;</li>
+                  <li>convert a vmdk file to vhd format;</li>
+                  <li>create new Hyper-V VM;</li>
+                  <li>run those three in bacth mode.</li>
+                </ul>
+                <p class="project-fine-print">End of the description</p>
+              </div>
+            </div>
+            <div class="project topick-accent">
+              <h3 class="project__title">Coming soon</h3>
+              <!-- <img src="assets/img/project.jpg" alt="pr" class="project__img"> -->
+              <div class="project__content">
+              </div>
+            </div>
+            <div class="project topick-accent">
+              <h3 class="project__title">Coming soon</h3>
+              <!-- <img src="assets/img/project.jpg" alt="pr" class="project__img">
+              <div class="project__content">
+              </div> -->
+            </div>
+        </div>
+      </section>
+
+      <section id="contact" class="contact section">
+        <header class="contact__intro">
+          <h2 class="section-title-small text-primary">Have any questions?</h2>
+        </header>
+        <div class="contact__body">
+          <div class="contact__form topick-accent">
+            <h3 class="text-primary"> Mail me:</h3>
+            <form id="invisible-recaptcha-form" accept-charset="UTF-8" action="https://usebasin.com/f/8b726bcfcc06" method="POST" onsubmit="document.getElementById('submit').disabled=true; processFormData();"> 
+              <div class="form-group"> 
+              <input class="form-control" type="username" name="username" id="name" placeholder="Your username" style="display: none;"><input class="form-control" type="username" name="name" id="name" placeholder="Your name" required> 
+              </div> 
+              <div class="form-group"> 
+                <input class="form-control" type="email" name="email" id="email" placeholder="Your email address" required> 
+              </div> 
+              <div class="form-group"> 
+                <textarea class="form-control" rows="4" name="message" id="message" placeholder="Message" required></textarea> 
+              </div> 
+              <div class="form-check"> 
+                <input class="form-check-input" type="checkbox" name="agree" id="consent" required> 
+                <label class="form-check-label small" for="consent">I've read the privacy policy and give my consent to handle the information I provided above</label> 
+              </div> 
+              <div class="form-buttons"> 
+                <button id="submit" type="submit">Send</button>
+                <button id="reset" type="reset">Reset</button>
+              </div> 
+              </form>              
+          </div>
+          <div class="contact__policy topick-accent">
+            <h3 id="priv" class="policy__title">Please read the privacy policy here!</h3>
+            <div class="policy__body">
+              <p>A message should not contain:</p>
+              <p>- spam;</p>
+              <p>- threats;</p>
+              <p>- profanity and hate speech;</p>
+              <p>- comments containing inappropriate content.</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
     </main>
-    <footer class=" container"> 
-      <p class="copy-right">Copyright &copy; 2020 <strong>Evgeny Karpovsky</strong> | All rights reserved</p>
-      <div class="social-link">
+    
+    <footer> 
+      <p class="footer-copyright">Copyright &copy; 2020 <strong>Evgeny Karpovsky</strong> | All rights reserved</p>
+      <div class="footer-social">
         <p>Find me on:</p>
-        <a href="https://github.com/ekarpovs" target="_blank"><i class="fab fa-github fa-fw fa-2x"></i> </a>   
-        <a href="https://www.linkedin.com/in/Evgeny Karpovsky" target="_blank"><i class="fab fa-linkedin fa-fw fa-2x"></i></a> 
+        <ul class="footer-social-links">
+          <li><a href="https://github.com/ekarpovs" target="_blank"><i class="fab fa-github-square  fa-2x"></i></a></li>
+          <li></li><a href="https://linkedin.com/in/evgeny-karpovsky-b4120423" target="_blank"><i class="fab fa-linkedin fa-fw fa-2x"></i></a></li>
+        </ul> 
       </div>
-    </footer> 
+      <!-- <p><a href="/"><i class="fas fa-arrow-up"></i></a></p>     -->
+     </footer> 
   </body> 
 </html>
 
