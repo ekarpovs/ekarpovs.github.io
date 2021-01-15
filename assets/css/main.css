@@ -222,7 +222,7 @@ a:focus {
 }
 
 .contact__form ::placeholder {
-  color: red;
+  color: rgb(255, 187, 0);
   opacity: 0.5;
 }
 
