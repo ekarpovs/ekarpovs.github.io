@@ -5,7 +5,7 @@
 
   --clr-text: #3d3d3d;
   --clr-primary:  #555861;
-  --clr-nav: rgb(228, 215, 215);
+  --clr-nav: rgb(185, 172, 172);
   --clr-bckgr-page: #30343F;
   --clr-bckgr-section: rgb(230, 224, 221);
   --clr-bckgr-topick: rgb(249, 247, 247);
@@ -112,13 +112,18 @@ p:last-child {
   padding: 0.5em;
 }
 
+.logo img {
+  border: 2px solid var(--clr-primary);
+  border-radius: 15px;
+}
+
 .section {
   background-color: var(--clr-bckgr-section);   
   margin: 0;
 }
 
 .section-title {
-  padding: 0.5em;
+  padding: 1em;
 }
 
 .section-title-small {
@@ -132,7 +137,7 @@ p:last-child {
 
 /* navigation */
 header {
-  padding: 1em 0 1em;
+  padding: 1em 0 0;
 }
 
 nav ul {
@@ -153,6 +158,7 @@ nav a {
 
 nav a:hover,
 a:focus {
+  color: white;
   text-decoration: underline; 
 }
 
@@ -174,13 +180,23 @@ a:focus {
 
 .project {
   background-color: var(--clr-bckgr-topick);
-   
 }
 
 .project__title {
   color: var(--clr-primary);
   font-size: 1.5rem;
   margin-bottom: 0.5em;
+}
+
+.project .project__title a {
+  text-decoration: none;
+  color: var(--clr-primary);
+}
+
+.project .project__title
+a:hover,
+a:focus {
+  text-decoration: underline; 
 }
 
 .project__content {
@@ -205,10 +221,6 @@ a:focus {
   padding: 0.5em 0 1em 0;
 }
 
-.contact__intro {
-  padding-bottom: 1em;
-}
-
 .contact__body {
   display: flex;
   flex-direction: column;
@@ -222,7 +234,7 @@ a:focus {
 }
 
 .contact__form ::placeholder {
-  color: red;
+  color: rgb(255, 187, 0);
   opacity: 0.5;
 }
 
@@ -295,9 +307,14 @@ footer p {
   margin-right: 0.5em;
 }
 
+.footer-social-links a i:hover {
+  color:white;
+}
+
 .footer-social-links * {
   color: rgb(192, 188, 188);
 }
+
 
 
 /* Media query. Mobile first approach */
