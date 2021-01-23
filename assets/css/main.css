@@ -193,8 +193,7 @@ a:focus {
   color: var(--clr-primary);
 }
 
-.project .project__title
-a:hover,
+.project .project__title a:hover,
 a:focus {
   text-decoration: underline; 
 }
