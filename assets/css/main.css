@@ -180,13 +180,23 @@ a:focus {
 
 .project {
   background-color: var(--clr-bckgr-topick);
-   
 }
 
 .project__title {
   color: var(--clr-primary);
   font-size: 1.5rem;
   margin-bottom: 0.5em;
+}
+
+.project .project__title a {
+  text-decoration: none;
+  color: var(--clr-primary);
+}
+
+.project .project__title
+a:hover,
+a:focus {
+  text-decoration: underline; 
 }
 
 .project__content {
