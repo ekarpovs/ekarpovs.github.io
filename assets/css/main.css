@@ -5,7 +5,7 @@
 
   --clr-text: #3d3d3d;
   --clr-primary:  #555861;
-  --clr-nav: rgb(228, 215, 215);
+  --clr-nav: rgb(185, 172, 172);
   --clr-bckgr-page: #30343F;
   --clr-bckgr-section: rgb(230, 224, 221);
   --clr-bckgr-topick: rgb(249, 247, 247);
@@ -112,13 +112,18 @@ p:last-child {
   padding: 0.5em;
 }
 
+.logo img {
+  border: 2px solid var(--clr-primary);
+  border-radius: 15px;
+}
+
 .section {
   background-color: var(--clr-bckgr-section);   
   margin: 0;
 }
 
 .section-title {
-  padding: 0.5em;
+  padding: 1em;
 }
 
 .section-title-small {
@@ -132,7 +137,7 @@ p:last-child {
 
 /* navigation */
 header {
-  padding: 1em 0 1em;
+  padding: 1em 0 0;
 }
 
 nav ul {
@@ -153,6 +158,7 @@ nav a {
 
 nav a:hover,
 a:focus {
+  color: white;
   text-decoration: underline; 
 }
 
@@ -203,10 +209,6 @@ a:focus {
 
 .contact {
   padding: 0.5em 0 1em 0;
-}
-
-.contact__intro {
-  padding-bottom: 1em;
 }
 
 .contact__body {
@@ -295,9 +297,14 @@ footer p {
   margin-right: 0.5em;
 }
 
+.footer-social-links a i:hover {
+  color:white;
+}
+
 .footer-social-links * {
   color: rgb(192, 188, 188);
 }
+
 
 
 /* Media query. Mobile first approach */
