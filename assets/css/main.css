@@ -169,6 +169,7 @@ a:focus {
 .about__body {
   background-color: var(--clr-bckgr-topick);   
   margin: 0 0.5em;
+  border-radius: 5px;
 }
 
 .projects {
@@ -179,7 +180,14 @@ a:focus {
 }
 
 .project {
+  border-radius: 5px;
   background-color: var(--clr-bckgr-topick);
+  transform-origin: center;
+
+}
+
+.project:hover {
+  transform: scale(1.01) translateZ(0)  
 }
 
 .project__title {
@@ -229,6 +237,7 @@ a:focus {
 }
 
 .contact__form {
+  border-radius: 5px;
   background-color: var(--clr-bckgr-topick);
 }
 
@@ -250,6 +259,7 @@ a:focus {
 
 .contact__policy {
   background-color: var(--clr-bckgr-topick);
+  border-radius: 5px;
 }
 
 .policy__title {
@@ -314,6 +324,34 @@ footer p {
   color: rgb(192, 188, 188);
 }
 
+/*Floating Back-To-Top Button*/
+#go-to-top {
+  position: fixed;
+  bottom: 40px;
+  float: right;
+  /* right: 18.5%;
+  left: 77.25%; */
+  right: 12%;
+  left: 88%;
+  max-width: 30px;
+  width: 100%;
+  font-size: 12px;
+  border-color: rgba(85, 85, 85, 0.2);
+  background-color: rgb(100,100,100);
+  padding: .5px;
+  border-radius: 4px;
+  opacity: 30%;
+}
+
+#go-to-top a {
+  color: beige;
+  text-decoration: none;
+}
+
+/*On Hover Color Change*/
+#go-to-top:hover {
+  background-color: #7dbbf1;
+}
 
 
 /* Media query. Mobile first approach */
@@ -353,5 +391,11 @@ footer p {
   .footer-social {
     justify-content: right;
   } 
+
+  #go-to-top {
+    bottom: 80px;
+    right: 4%;
+    left: 96%;  
+  }
 }
 
