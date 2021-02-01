@@ -12,6 +12,8 @@
   --fs-400-mob: 0.75rem;
   --fs-400: 1.125rem;
   --fs-500: 1.25rem;
+
+  --card-border-radius: 5px;
 }
 
 /* Box sizing rules */
@@ -36,11 +38,6 @@ ul {
   text-align: center;
 }
 
-/* body {
-  background: #f7f7f7;
-  color: #424242;  
-} */
-
 html {
   box-sizing: border-box;
   font-family: var(--ff-text);
@@ -63,10 +60,6 @@ body {
 main {
   padding: 0;
 }
-
-/* section {
-  padding: 2em 1em;
-} */
 
 /* Typography */
 
@@ -130,6 +123,10 @@ p:last-child {
   font-size: 1.75rem;
 }
 
+.project__img {
+  opacity: 0.5;
+}
+
 .topick-accent {
   box-shadow: 0 0 1em rgba(0, 0, 0, 0.5);
   padding: 1em;
@@ -169,7 +166,7 @@ a:focus {
 .about__body {
   background-color: var(--clr-bckgr-topick);   
   margin: 0 0.5em;
-  border-radius: 5px;
+  border-radius: var(--card-border-radius);
 }
 
 .projects {
@@ -180,14 +177,15 @@ a:focus {
 }
 
 .project {
-  border-radius: 5px;
+  border-radius: var(--card-border-radius);
   background-color: var(--clr-bckgr-topick);
   transform-origin: center;
-
+  opacity: 0.3;
 }
 
 .project:hover {
-  transform: scale(1.01) translateZ(0)  
+  transform: scale(1.01) translateZ(0);  
+  opacity: 1;
 }
 
 .project__title {
@@ -237,7 +235,7 @@ a:focus {
 }
 
 .contact__form {
-  border-radius: 5px;
+  border-radius: var(--card-border-radius);
   background-color: var(--clr-bckgr-topick);
 }
 
@@ -259,7 +257,7 @@ a:focus {
 
 .contact__policy {
   background-color: var(--clr-bckgr-topick);
-  border-radius: 5px;
+  border-radius: var(--card-border-radius);
 }
 
 .policy__title {
@@ -327,7 +325,7 @@ footer p {
 /*Floating Back-To-Top Button*/
 #go-to-top {
   position: fixed;
-  bottom: 40px;
+  bottom: 23px;
   float: right;
   /* right: 18.5%;
   left: 77.25%; */
@@ -340,7 +338,6 @@ footer p {
   background-color: rgb(100,100,100);
   padding: .5px;
   border-radius: 4px;
-  opacity: 30%;
 }
 
 #go-to-top a {
@@ -351,8 +348,16 @@ footer p {
 /*On Hover Color Change*/
 #go-to-top:hover {
   background-color: #7dbbf1;
+  /* opacity: 1; */
 }
 
+.go-to-top-hide {
+  opacity: 0;
+}
+
+.go-to-top-show {
+  opacity: 0.5;
+}
 
 /* Media query. Mobile first approach */
 @media only screen and (min-width: 750px) {
