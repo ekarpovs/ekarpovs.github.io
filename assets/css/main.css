@@ -155,18 +155,30 @@ nav a {
 
 nav a:hover,
 a:focus {
-  color: white;
+  color: bisque;
   text-decoration: underline; 
 }
-
-/* buttons */
 
 /* Homepage styles */
 
 .about__body {
-  background-color: var(--clr-bckgr-topick);   
-  margin: 0 0.5em;
+  background-color: var(--clr-bckgr-topick);
   border-radius: var(--card-border-radius);
+  margin: 0 0.5em;
+}
+
+.about__body p {
+  text-align: center;
+}
+
+.about__body a {
+  color: orange;
+  text-decoration: none; 
+}
+
+.about__body a:hover,
+a:focus {
+  text-decoration: underline; 
 }
 
 .projects {
