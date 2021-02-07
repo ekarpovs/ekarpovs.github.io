@@ -214,6 +214,7 @@ a:focus {
 
 .project__content ul {
   padding-left: 2em;
+  padding-bottom: 1em;
 }
 
 .project-fine-print {
@@ -380,7 +381,7 @@ footer p {
 
   .project {
     flex-grow: 1;
-    flex-basis: 32%;
+    flex-basis: 22%;
   }
 
   .contact__body {
