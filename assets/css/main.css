@@ -1,7 +1,9 @@
 /* Variables */
 :root {
-  --ff-title: "Crimson Text", serif;
-  --ff-text: "Roboto", sans-serif;
+  --ff-title: 'Satisfy', serif;
+  --ff-subtitle: "Crimson Text", serif;
+
+  --ff-text: "Roboto Slab", sans-serif;
 
   --clr-text: #3d3d3d;
   --clr-primary:  #555861;
@@ -67,7 +69,6 @@ h1,
 h2,
 h3,
 h4 {
-  font-family: var(--ff-title);
   line-height: 0.8;
   letter-spacing: 1px;
 }
@@ -116,15 +117,13 @@ p:last-child {
 }
 
 .section-title {
+	font-size: 1.75em;
+	font-family: var(--ff-title);
   padding: 1em;
 }
 
 .section-title-small {
   font-size: 1.75rem;
-}
-
-.project__img {
-  opacity: 0.5;
 }
 
 .topick-accent {
@@ -162,13 +161,26 @@ a:focus {
 /* Homepage styles */
 
 .about__body {
-  background-color: var(--clr-bckgr-topick);
+  /* background-color: var(--clr-bckgr-section); */
+  /* background-color: lightcyan; */
   border-radius: var(--card-border-radius);
-  margin: 0 0.5em;
+  padding-top: 1em;
+  margin: 0;
+}
+
+.about__body h3 {
+	font-size: 1.75em;
+	font-family: var(--ff-title);
+  margin-bottom: 0.5em;
 }
 
 .about__body p {
   text-align: center;
+}
+
+.about__body .p-accent {
+  font-style: italic;
+  font-weight: bold;
 }
 
 .about__body a {
@@ -196,12 +208,20 @@ a:focus {
 }
 
 .project:hover {
-  transform: scale(1.01) translateZ(0);  
+  transform: scale(1.02) translateZ(0);  
   opacity: 1;
+}
+
+.project__img {
+  margin-left: auto;
+  margin-right: auto;
+  opacity: 0.5;
 }
 
 .project__title {
   color: var(--clr-primary);
+  font-family: var(--ff-subtitle);
+  font-style: italic;
   font-size: 1.5rem;
   margin-bottom: 0.5em;
 }
@@ -216,7 +236,7 @@ a:focus {
   text-decoration: underline; 
 }
 
-.project__content {
+.project .project__content {
   padding: 0.5em;
 }
 
@@ -386,9 +406,16 @@ footer p {
     padding: 40vh 1em;
   }
 
+  .about {
+    height: auto;
+    padding-top: 13em;
+    padding-bottom: 15em;
+}
+
   .projects {
     flex-direction: row;
     flex-wrap: wrap;
+    padding-top: 1em;
   }
 
   .project {
