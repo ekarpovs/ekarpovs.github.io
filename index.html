@@ -42,8 +42,8 @@
     <link rel="stylesheet" href="assets/css/main.css"> 
   </head> 
   <body>
-    <header>
-      <nav>
+    <header class="header">
+      <nav class="nav">
         <ul>
           <li class="logo"><img src="assets/img/logo-small.png" alt=""><a href=""></a></li>
           <li><a href="#home">Home</a></li>
@@ -56,11 +56,11 @@
     <main id="main">
       
       <section id="about" class="about section">
+        <h2 class="section-title text-primary">My name is Evgeny Karpovsky.</h2>
         <div class="about__body">
-          <h3>My name is Evgeny Karpovsky.</h3> 
           <p>Welcome to my site. It's partly a portfolio, part a blog.</p>
           <p>I am a senior Full Stack developer with extensive experience in developing complex enterprise-scale products.</p>
-          <p>Over the past few years (~20), I've worked at <a href="https://www.bmc.com" target="_blank" rel="noopener noreferrer">BMC Software</a>, - software company for enterprises. </p>
+          <p>Over the past few years (~20), I've worked at BMC Software, - software company for enterprises. </p>
           <p>Over those years, I have developed the important components of enterprise products for report management (Control-D) and workload automation (Control-M). And also several independent products from scratch.</p> 
           <p>Info about the products you can find on the <a href="https://www.bmc.com" target="_blank" rel="noopener noreferrer">BMC Software </a>site.</p>
           <p>In the time, I've used many different program languages and technologies.</p>
@@ -69,12 +69,10 @@
       </section>
 
       <section id="projects" class="projects-showcase section">
-        <header class="section-title">
-          <h3 class="section-title-small text-primary">Open Source Projects</h3>
-        </header>
+         <h2 class="section-title text-primary">Open Source Projects</h2>
         <div class="projects">
             <div class="project topick-accent">
-              <h3 class="project__title"><a href="https://github.com/ekarpovs/hyper-v-vm-creator" target="_blank" rel="noopener noreferrer">Hyper-V Virtual Machine batch creator</a></h3>
+              <h2 class="project__title"><a href="https://github.com/ekarpovs/hyper-v-vm-creator" target="_blank" rel="noopener noreferrer">Hyper-V Virtual Machine batch creator</a></h2>
               <img src="assets/img/P1.png" alt="pr" class="project__img">
               <div class="project__content">
                 <p>Set of Power Shell scripts for convert VMware Workstation/Oracle VM Virtualbox (ova.zip files) to Hyper-V Virtual Machine.</p>
@@ -143,11 +141,9 @@
       </section>
 
       <section id="contact" class="contact section">
-        <header class="section-title">
-          <h2 class="section-title-small text-primary">Have any questions?</h2>
-        </header>
+        <h2 class="section-title text-primary">Have any questions?</h2>
         <div class="contact__body">
-          <div class="contact__form topick-accent">
+          <div class="contact__form">
             <h3 class="text-primary"> Mail me:</h3>
             <form id="invisible-recaptcha-form" accept-charset="UTF-8" action="https://usebasin.com/f/8b726bcfcc06" method="POST" onsubmit="document.getElementById('submit').disabled=true; processFormData();"> 
               <div class="form-group"> 
@@ -161,7 +157,7 @@
               </div> 
               <div class="form-check"> 
                 <input class="form-check-input" type="checkbox" name="agree" id="consent" required> 
-                <label class="form-check-label small" for="consent">I've read the privacy policy and give my consent to handle the information I provided above</label> 
+                <label class="form-check-label" for="consent">I've read the privacy policy and give my consent to handle the information I provided above</label> 
               </div> 
               <div class="form-buttons"> 
                 <button id="submit" type="submit">Send</button>
@@ -169,14 +165,15 @@
               </div> 
               </form>              
           </div>
-          <div class="contact__policy topick-accent">
-            <h3 id="priv" class="policy__title">Please read the privacy policy here!</h3>
+          <div class="contact__policy">
+            <h3 class="policy__title">Please read the privacy policy here!</h3>
             <div class="policy__body">
-              <p>A message should not contain:</p>
-              <p>- spam;</p>
-              <p>- threats;</p>
-              <p>- profanity and hate speech;</p>
-              <p>- comments containing inappropriate content.</p>
+              <ul>A message should not contain:
+                <li>spam;</li>
+                <li>threats;</li>
+                <li>profanity and hate speech;</li>
+                <li>comments containing inappropriate content.</li>
+              </ul>
             </div>
           </div>
         </div>
@@ -184,7 +181,7 @@
 
     </main>
     
-    <footer> 
+    <footer class="footer"> 
       <p class="footer-copyright">Copyright &copy; 2020 <strong>Evgeny Karpovsky</strong> | All rights reserved</p>
       <div class="footer-social">
         <p>Find me on:</p>
