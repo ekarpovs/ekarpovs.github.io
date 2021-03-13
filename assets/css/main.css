@@ -1,3 +1,12 @@
+/* 
+1. Split the content up into groups
+2. Increase contrast through font-size
+3. Increase contrast through font-weight
+4. Increase contrast through color
+5. Increase the line-height of the body
+6. Decrease the line-height of large text
+*/
+
 /* Variables */
 :root {
   --ff-title: 'Satisfy', serif;
@@ -5,11 +14,12 @@
 
   --ff-text: "Roboto Slab", sans-serif;
 
-  --clr-text: #3d3d3d;
+  --clr-text: black;
   --clr-primary:  #555861;
+  --clr-bckgr-hdft: #30343F;
   --clr-nav: rgb(185, 172, 172);
-  --clr-bckgr-page: #30343F;
   --clr-bckgr-topick: rgb(249, 247, 247);
+  
   --fs-400-mob: 0.75rem;
   --fs-400: 1.125rem;
   --fs-500: 1.25rem;
@@ -43,8 +53,7 @@ html {
   box-sizing: border-box;
   font-family: var(--ff-text);
   font-size: var(--fs-500);
-  background: radial-gradient(ellipse farthest-corner at 90% 90%,
-  beige, rgb(138, 192, 206) 10%, #1e90ff 50%, beige);  
+  background: linear-gradient(to right, #b4ab8f, #DFDFCA);
   color: var(--clr-text);
 }
 
@@ -64,13 +73,14 @@ main {
 }
 
 /* Typography */
+/* Properties that define the color, size, spacing, and shape of text */
 
 h1,
 h2,
 h3,
 h4 {
-  line-height: 0.8;
-  letter-spacing: 1px;
+  line-height: 1.6;
+  letter-spacing: 0.1em;
 }
 
 h1 {
@@ -124,7 +134,7 @@ p:last-child {
 
 /* navigation */
 .header {
-  background-color: var(--clr-bckgr-page);
+  background-color: var(--clr-bckgr-hdft);
   padding: 0;
 }
 
@@ -161,9 +171,6 @@ a:focus {
 }
 
 .about__body {
-  border-radius: var(--card-border-radius);
-  padding: 0.5em;
-  margin: 0;
 }
 
 
@@ -174,6 +181,7 @@ a:focus {
 .about__body .p-accent {
   font-style: italic;
   font-weight: bold;
+  margin-top: 2em;
 }
 
 .about__body a {
@@ -187,11 +195,16 @@ a:focus {
   text-decoration: underline; 
 }
 
+.projects-showcase {
+  background-color: var(--clr-bckgr-topick);
+}
+
 .projects {
   display: flex;
-  gap: 0.5em;
+  gap: 1em;
   flex-direction: column;
-  margin: 0 0.5em;
+  margin: 0;
+  padding: 0.5em;
 }
 
 .project {
@@ -243,14 +256,14 @@ a:focus {
   padding-bottom: 1em;
 }
 
-.project-fine-print {
+/* .project-fine-print {
   font-size: 0.75rem;
   color: rgba(0, 0, 0, 0.55);
   margin: 1em;
-}
+} */
 
 .contact {
-  padding: 0.5em 0 1em 0;
+  /* padding: 0.5em 0 1em 0; */
   color: white;
   padding-bottom: 5em;
 }
@@ -264,9 +277,6 @@ a:focus {
   margin: 1em;
 }
 
-.contact__form {
-  margin-top: 1em;
-}
 
 .contact__form h3 {
   font-style: italic;
@@ -280,7 +290,6 @@ a:focus {
 
 .form-control {
   width: 100%;
-  height: 2.5em;
   margin: 0.5em 0;
 }
 
@@ -323,7 +332,7 @@ a:focus {
 
 
 .footer {
-  background-color: var(--clr-bckgr-page);
+  background-color: var(--clr-bckgr-hdft);
   padding: 0;
   color: var(--clr-nav);
   display: flex;
@@ -436,31 +445,27 @@ a:focus {
   }
 
   .about {
-    height: auto;
-    padding: 9% 3em 13% 3em;
+    padding: 6em 5em 10em 5em;
   }
 
   .about__body p {
-    text-align: center;
   }
 
   .projects {
     flex-direction: row;
     flex-wrap: wrap;
-    padding-top: 1em;
   }
 
   .project {
     flex-grow: 1;
-    flex-basis: 22%;
+    flex-basis: 45%;
   }
 
-  .contact h2 {
+  .contact {
     padding-top: 5em;
   }
 
   .contact__body {
-    padding: 3em 3em 6em 3em;
     flex-direction: row;
     align-items: top;
   }
@@ -470,9 +475,9 @@ a:focus {
   }
 
   .form-control {
-    height: 3.5em;
+    font-size: 1em;
   }
-
+ 
   button {
     border-radius: 0.25em;
     font-size: 1em;
