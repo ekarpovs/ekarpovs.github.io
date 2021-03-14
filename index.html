@@ -30,18 +30,19 @@
 
     <link type="application/atom+xml" rel="alternate" href="https://ekarpovs.github.io/feed.xml" title="Evgeny Karpovsky (ekarpovs)" /> 
 
-    <link rel="dns-prefetch" href="//fonts.googleapis.com/"> 
-
     <script src="https://kit.fontawesome.com/62915736e7.js" crossorigin="anonymous"></script>
 
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital@1&family=Montserrat&display=swap">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Crimson+Text:ital@1&family=Montserrat:ital@0;1&display=swap">    
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Montserrat&family=Roboto&display=swap">    
+    <link rel="dns-prefetch" href="//fonts.googleapis.com/"> 
+
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Pacifico">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Roboto+Slab">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Satisfy">
+
     <link rel="stylesheet" href="assets/css/main.css"> 
   </head> 
   <body>
-    <header>
-      <nav>
+    <header class="header">
+      <nav class="nav">
         <ul>
           <li class="logo"><img src="assets/img/logo-small.png" alt=""><a href=""></a></li>
           <li><a href="#home">Home</a></li>
@@ -54,29 +55,24 @@
     <main id="main">
       
       <section id="about" class="about section">
-        <header class="about__intro">
-          <h2 class="section-title-small text-primary">Hi,</h2>
-        </header>
-        <div class="about__body topick-accent">
-          <p>Welcome to my personal site. It's part a portfolio, part a blog.</p>
-          <p>My name is Evgeny Karpovsky.</p> 
+        <h2 class="section-title text-primary">My name is Evgeny Karpovsky.</h2>
+        <div class="about__body">
+          <p>Welcome to my site. It's partly a portfolio, part a blog.</p>
           <p>I am a senior Full Stack developer with extensive experience in developing complex enterprise-scale products.</p>
-          <p>Over the past few years (~20), I've worked at <a href="https://www.bmc.com" target="_blank" rel="noopener noreferrer">BMC Software</a>, - software company for enterprises. </p>
-          <p>During these years, I've developed parts of  Report Management (Control-D) and Workload Automation (Control-M) enterprise products.</p> 
+          <p>Over the past few years (~20), I've worked at BMC Software, - software company for enterprises. </p>
+          <p>Over those years, I have developed the important components of enterprise products for report management (Control-D) and workload automation (Control-M). And also several independent products from scratch.</p> 
           <p>Info about the products you can find on the <a href="https://www.bmc.com" target="_blank" rel="noopener noreferrer">BMC Software </a>site.</p>
           <p>In the time, I've used many different program languages and technologies.</p>
-          <p><strong>At present, I try new things on the Web, Image-processing, and CI/CD fields. On the site, I'll show how it's going.</strong></p>
+          <p class="p-accent">At present, in my idle time, I try new things on the Web, Image-processing, CI/CD and cloud fields. On the site, I'll show how it's going.</p>
         </div>
       </section>
 
       <section id="projects" class="projects-showcase section">
-        <header class="section-title">
-          <h2 class="section-title-small text-primary">Open Source Projects</h2>
-        </header>
+         <h2 class="section-title text-primary">Public Open Source Projects</h2>
         <div class="projects">
             <div class="project topick-accent">
-              <h3 class="project__title"><a href="https://github.com/ekarpovs/hyper-v-vm-creator" target="_blank" rel="noopener noreferrer">Hyper-V Virtual Machine batch creator</a></h3>
-              <img src="assets/img/P1.png" alt="pr" class="project__img">
+              <h2 class="project__title"><a href="https://github.com/ekarpovs/hyper-v-vm-creator" target="_blank" rel="noopener noreferrer">Hyper-V Virtual Machine batch creator</a></h2>
+              <!-- <img src="assets/img/P1.png" alt="pr" class="project__img"> -->
               <div class="project__content">
                 <p>Set of Power Shell scripts for convert VMware Workstation/Oracle VM Virtualbox (ova.zip files) to Hyper-V Virtual Machine.</p>
                 <p>Includes following scripts:</p>
@@ -86,12 +82,12 @@
                   <li>create new Hyper-V VM;</li>
                   <li>run those three in bacth mode.</li>
                 </ul>
-                <p class="project-fine-print">End of the description</p>
+                <!-- <p class="project-fine-print">End of the description</p> -->
               </div>
             </div>
             <div class="project topick-accent">
               <h3 class="project__title"><a href="https://github.com/ekarpovs/image-processing-workshop" target="_blank" rel="noopener noreferrer">Image Processing Workshop</a></h3>
-              <img src="assets/img/p21.png" alt="pr" class="project__img">
+              <!-- <img src="assets/img/p21.png" alt="pr" class="project__img"> -->
               <div class="project__content">
                 <p>Set of repositories for leaning, modeling and tuning various image-processing algorithms, flows, etc.</p>
                 <p>Includes following repositories:</p>
@@ -100,12 +96,12 @@
                   <li><a href="https://github.com/ekarpovs/modules-and-worksheets" target="_blank" rel="noopener noreferrer">modules-and-worksheets</a> - implementation of various operations and combinations of the modules for perform whole tasks;</li>
                   <li>playback - (yet not ready);</li>
                 </ul>
-                <p class="project-fine-print">End of the description</p>
+                <!-- <p class="project-fine-print">End of the description</p> -->
               </div>
             </div>
             <div class="project topick-accent">
               <h3 class="project__title"><a href="https://github.com/ekarpovs/vsign-api" target="_blank" rel="noopener noreferrer">Vsign-API</a></h3>
-              <img src="assets/img/p3.png" alt="pr" class="project__img">
+              <!-- <img src="assets/img/p3.png" alt="pr" class="project__img"> -->
               <div class="project__content">
                 <p>V-Sign REST API for the site administration.</p>
                 <p>A Node.js REST API for ANG-SSR-SITE-BASE developing and debugging.</p>
@@ -118,12 +114,12 @@
                     <li>Hapy/joi (Requests validation).</li>
                   </ul>                 
                 <p>Seamless integration with CircleCI continuous integration and delivery platform.</p>
-                <p class="project-fine-print">End of the description</p>
+                <!-- <p class="project-fine-print">End of the description</p> -->
               </div>
             </div>
             <div class="project topick-accent">
               <h3 class="project__title"><a href="https://github.com/ekarpovs/ang-ssr-site-base" target="_blank" rel="noopener noreferrer">Angular-ssr-site-base</a></h3>
-              <img src="assets/img/p4.png" alt="pr" class="project__img">
+              <!-- <img src="assets/img/p4.png" alt="pr" class="project__img"> -->
               <div class="project__content">
                 <p>Angular client for site adimistration with server side rendering.</p>
                 <p>Uses:</p>
@@ -132,23 +128,21 @@
                   <li>Ngrx/store for state management;</li>
                   <li>Ngx-translate for i18n support;</li>
                   <li>Unionize for boilerplate-free functional sum types;</li>
-                  <li>Jest for unit tests, including code coverage</li>
-                  <li>Angulartics2 for vendor-agnostic analytics</li>
+                  <li>Jest for unit tests, including code coverage;</li>
+                  <li>Angulartics2 for vendor-agnostic analytics.</li>
                 </ul>
                 <p>Performing AoT compilation for rapid page loads on staging/production builds.</p>
                 <p>Seamless integration with CircleCI continuous integration and delivery platform.</p>
-                <p class="project-fine-print">End of the description</p>
+                <!-- <p class="project-fine-print">End of the description</p> -->
               </div>
             </div>
         </div>
       </section>
 
       <section id="contact" class="contact section">
-        <header class="section-title">
-          <h2 class="section-title-small text-primary">Have any questions?</h2>
-        </header>
+        <h2 class="section-title text-primary">Have any questions?</h2>
         <div class="contact__body">
-          <div class="contact__form topick-accent">
+          <div class="contact__form">
             <h3 class="text-primary"> Mail me:</h3>
             <form id="invisible-recaptcha-form" accept-charset="UTF-8" action="https://usebasin.com/f/8b726bcfcc06" method="POST" onsubmit="document.getElementById('submit').disabled=true; processFormData();"> 
               <div class="form-group"> 
@@ -158,11 +152,11 @@
                 <input class="form-control" type="email" name="email" id="email" placeholder="Your email address" required> 
               </div> 
               <div class="form-group"> 
-                <textarea class="form-control" rows="4" name="message" id="message" placeholder="Message" required></textarea> 
+                <textarea class="form-message" rows="5" name="message" id="message" placeholder="Message" required></textarea> 
               </div> 
               <div class="form-check"> 
                 <input class="form-check-input" type="checkbox" name="agree" id="consent" required> 
-                <label class="form-check-label small" for="consent">I've read the privacy policy and give my consent to handle the information I provided above</label> 
+                <label class="form-check-label" for="consent">I've read the privacy policy and give my consent to handle the information I provided above</label> 
               </div> 
               <div class="form-buttons"> 
                 <button id="submit" type="submit">Send</button>
@@ -170,14 +164,15 @@
               </div> 
               </form>              
           </div>
-          <div class="contact__policy topick-accent">
-            <h3 id="priv" class="policy__title">Please read the privacy policy here!</h3>
+          <div class="contact__policy">
+            <h3 class="policy__title">Please read the privacy policy here!</h3>
             <div class="policy__body">
-              <p>A message should not contain:</p>
-              <p>- spam;</p>
-              <p>- threats;</p>
-              <p>- profanity and hate speech;</p>
-              <p>- comments containing inappropriate content.</p>
+              <ul>A message should not contain:
+                <li>spam;</li>
+                <li>threats;</li>
+                <li>profanity and hate speech;</li>
+                <li>comments containing inappropriate content.</li>
+              </ul>
             </div>
           </div>
         </div>
@@ -185,8 +180,8 @@
 
     </main>
     
-    <footer> 
-      <p class="footer-copyright">Copyright &copy; 2020 <strong>Evgeny Karpovsky</strong> | All rights reserved</p>
+    <footer class="footer"> 
+      <p class="footer-copyright">Copyright &copy; 2020 Evgeny Karpovsky | All rights reserved</p>
       <div class="footer-social">
         <p>Find me on:</p>
         <ul class="footer-social-links">
@@ -194,7 +189,6 @@
           <li></li><a href="https://linkedin.com/in/evgeny-karpovsky-b4120423" target="_blank"><i class="fab fa-linkedin fa-fw fa-2x"></i></a></li>
         </ul> 
       </div>
-      <!-- <p><a href="/"><i class="fas fa-arrow-up"></i></a></p>     -->
      </footer> 
      <button id="go-to-top" class="go-to-top-hide"><a href="#top"><i class="fas fa-arrow-alt-circle-up fa-2x"></i></a></button>
      <script src="assets/js/main.js"></script>
