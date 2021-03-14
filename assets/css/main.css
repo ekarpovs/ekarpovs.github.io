@@ -1,30 +1,19 @@
-/* 
-1. Split the content up into groups
-2. Increase contrast through font-size
-3. Increase contrast through font-weight
-4. Increase contrast through color
-5. Increase the line-height of the body
-6. Decrease the line-height of large text
-*/
 
 /* Variables */
 :root {
   --ff-title: 'Satisfy', serif;
   --ff-subtitle: "Crimson Text", serif;
-
   --ff-text: "Roboto Slab", sans-serif;
 
-  --clr-text: black;
-  --clr-primary:  #555861;
-  --clr-bckgr-hdft: #30343F;
-  --clr-nav: rgb(185, 172, 172);
-  --clr-bckgr-topick: rgb(249, 247, 247);
-  
-  --fs-400-mob: 0.75rem;
-  --fs-400: 1.125rem;
-  --fs-500: 1.25rem;
+  --fs-title: 2.369rem;
+  --fs-subtitle: 1.777rem;
+  --fs-text: 1rem;
 
-  --card-border-radius: 5px;
+  --clr-bckgr-hdft: #30343F;
+  --clr-bckgr-topick: rgb(249, 247, 247);
+
+  --clr-text: black;
+  --clr-text-nav: white;
 }
 
 /* Box sizing rules */
@@ -34,10 +23,14 @@
   box-sizing: inherit;
 }
 
+html {
+  box-sizing: border-box;
+}
 /* Set core root defaults */
 
 /* remove default margin */
 body,
+main,
 h1,
 h2,
 h3,
@@ -49,14 +42,6 @@ ul {
   text-align: center;
 }
 
-html {
-  box-sizing: border-box;
-  font-family: var(--ff-text);
-  font-size: var(--fs-500);
-  background: linear-gradient(to right, #b4ab8f, #DFDFCA);
-  color: var(--clr-text);
-}
-
 /* make images easier to work with */
 img, 
 picture {
@@ -64,86 +49,86 @@ picture {
   max-width: 100%;
 }
 
-body {
-  padding: 0;
-}
-
-main {
-  padding: 0;
-}
-
 /* Typography */
 /* Properties that define the color, size, spacing, and shape of text */
+html {
+  font-size: 100%;
+} /*16px*/
 
-h1,
-h2,
-h3,
-h4 {
-  line-height: 1.6;
-  letter-spacing: 0.1em;
+body {
+  font-family: var(--ff-text);
+  /* background: linear-gradient(to right, #b4ab8f, #DFDFCA); */
+  font-weight: 400;
+  line-height: 1.75;
 }
 
 h1 {
-  font-size: 2.0rem;
+  font-size: 4.209rem;
 }
 
 h2 {
-  font-size: 1.75rem;
+  font-size: 3.157rem;
 }
 
 h3 {
-  font-size: 1.25rem;
+  font-size: 2.369rem;
+}
+
+h3 {
+  font-size: 2.369rem;
+}
+
+h4 {
+  font-size: 1.777rem;
+}
+
+h5 {
+  font-size: ;
 }
 
 p {
-  margin-bottom: 0.75em;
-}
+  font-size: 1rem;
 
-p:last-child {
-  margin-bottom: 0;
+}
+small, .text_small {
+  font-size: 0.75rem;
 }
 
 .text-primary {
-  color: var(--clr-primary);
+  color: var(--clr-text);
 }
 
 .logo {
-  padding: 0.5em;
+  padding: 1rem 0 0 0;
 }
 
 .logo img {
-  border: 2px solid var(--clr-primary);
-  border-radius: 15px;
-}
-
-.section {
-  font-size: var(--fs-400-mob);
-  margin: 0;
+  border-radius: 25px;
 }
 
 .section-title {
 	font-family: var(--ff-title);
-  font-size: 1.75rem;
-  padding: 1em;
+  font-size: var(--fs-title);
+  padding: 1rem;
 }
 
 .topick-accent {
-  box-shadow: 0 0 1em rgba(0, 0, 0, 0.5);
-  padding: 1em;
+  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.5);
+  padding: 0.75rem;
 }
 
-/* navigation */
+/* Navigation */
 .header {
   background-color: var(--clr-bckgr-hdft);
   padding: 0;
 }
 
 .header .nav {
-  padding-top: 0.5em;
+  padding-top: 1rem;
+  padding-bottom: 0;
 }
 
 .header .nav ul {
-  font-size: var(--fs-400-mob);
   display: flex;
   list-style: none;
   justify-content: space-around;
@@ -153,8 +138,8 @@ p:last-child {
 
 .header .nav a {
   display: inline-block;
-  padding: 0.85em;
-  color: var(--clr-nav);
+  padding: 0.85rem 0 0 0;
+  color: var(--clr-text-nav);
   background-color: transparent;
   text-decoration: none;
 }
@@ -167,12 +152,8 @@ a:focus {
 
 /* Homepage styles */
 .about {
-  color: white;
+  padding: 1rem;
 }
-
-.about__body {
-}
-
 
 .about__body p {
   text-align: center;
@@ -181,7 +162,7 @@ a:focus {
 .about__body .p-accent {
   font-style: italic;
   font-weight: bold;
-  margin-top: 2em;
+  margin-top: 2rem;
 }
 
 .about__body a {
@@ -190,52 +171,33 @@ a:focus {
   text-decoration: none; 
 }
 
-.about__body a:hover,
-a:focus {
+.about__body a:hover, a:focus {
   text-decoration: underline; 
 }
 
-.projects-showcase {
-  background-color: var(--clr-bckgr-topick);
-}
-
+/* Projects styles */
 .projects {
   display: flex;
-  gap: 1em;
+  gap: 1rem;
   flex-direction: column;
-  margin: 0;
-  padding: 0.5em;
+  padding: 1rem;
 }
 
 .project {
-  border-radius: var(--card-border-radius);
-  background-color: var(--clr-bckgr-topick);
+  border-radius: 5px;
   transform-origin: center;
-  opacity: 0.3;
-}
-
-.project:hover {
-  transform: scale(1.02) translateZ(0);  
-  opacity: 1;
-}
-
-.project__img {
-  margin-left: auto;
-  margin-right: auto;
-  opacity: 0.5;
 }
 
 .project__title {
-  color: var(--clr-primary);
   font-family: var(--ff-subtitle);
+  font-size: var(--fs-subtitle);
   font-style: italic;
-  font-size: 1.5rem;
-  margin-bottom: 0.5em;
+  padding-top: 0.5rem;
 }
 
 .project .project__title a {
   text-decoration: none;
-  color: var(--clr-primary);
+  color: var(--clr-text);
 }
 
 .project .project__title a:hover,
@@ -244,7 +206,7 @@ a:focus {
 }
 
 .project .project__content {
-  padding: 0.5em;
+  padding: 1rem;
 }
 
 .project__content p, li {
@@ -252,20 +214,16 @@ a:focus {
 }
 
 .project__content ul {
-  padding-left: 2em;
-  padding-bottom: 1em;
+  padding-left: 2rem;
 }
 
-/* .project-fine-print {
-  font-size: 0.75rem;
-  color: rgba(0, 0, 0, 0.55);
-  margin: 1em;
-} */
 
-.contact {
-  /* padding: 0.5em 0 1em 0; */
-  color: white;
-  padding-bottom: 5em;
+/* Contac styles */
+
+.contact__form h3 {
+  font-family: var(--ff-subtitle);
+  font-size: var(--fs-subtitle);
+  font-style: italic;
 }
 
 .contact__body {
@@ -273,77 +231,82 @@ a:focus {
   flex-direction: column;
   justify-content: space-around;
   align-items: top;
-  gap: 0.5em;
-  margin: 1em;
+  gap: 0.5rem;
 }
 
-
-.contact__form h3 {
-  font-style: italic;
-  padding-bottom: 0.5em;
-}
 
 .contact__form ::placeholder {
-  color: rgb(255, 187, 0);
-  opacity: 0.5;
+  color: rgb(255, 0, 85);
+  opacity: 0.7;
 }
 
 .form-control {
-  width: 100%;
-  margin: 0.5em 0;
+  font-size: var(--fs-text);
+  height: 2rem;
+  width: 80%;
+  margin: 1rem;
+}
+
+.form-message {
+  font-size: 1.4rem;
+  width: 80%;
+  margin: 1rem;
 }
 
 .form-buttons {
   display: flex;
   justify-content: space-around;
-  margin-top: 0.5em;
+  margin-top: 0.5rem;
 }
 
 .form-check {
-  padding-bottom: 0.5em;
+  padding-bottom: 0.5rem;
 }
 
 .form-check-label {
-  font-size: 0.75em;
+  font-size: 1rem;
 }
 
 .contact__policy {
-  margin-top: 1.5em;
+  margin-top: 1.5rem;
 }
 
 .policy__title {
   color: rgb(218, 136, 136);
-  font-size: 1em;
+  font-size: var(--fs-text);
   font-style: italic;
-  padding-top: 0.5em;
-  padding-bottom: 0.5em;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
 }
 
 .policy__body ul {
-  font-size: 0.75em;
+  font-size: 1rem;
   text-align: left;
   margin: 0;
-  padding-left: 5em;
+  padding-left: 5rem;
 }
 
 .policy__body ul li {
-  margin-left: 2em;  
+  margin-left: 2rem;  
 }
 
 
+/* Footer styles */
 .footer {
   background-color: var(--clr-bckgr-hdft);
   padding: 0;
-  color: var(--clr-nav);
+  color: var(--clr-text-nav);
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  padding: 1em 1em;
+
+  padding: 1rem 1rem;
+  margin-top: 2rem;
 }
 
 
 .footer-copyright {
-  padding-top: 0.3em;
+  padding-top: 0.3rem;
 }
 
 .footer p {
@@ -352,25 +315,24 @@ a:focus {
 
 
 .footer-social {
-  font-size: var(--fs-400-mob);
   display: flex;
   justify-content: center;
-  margin-right: 1em;
-  padding-top: 0.4em;
+  margin-right: 1rem;
+  padding-top: 0.4rem;
 }
 
 .footer-social p {
-  padding: 0.25em;
+  padding: 0.25rem;
 }
 
 .footer-social-links {
   display: flex;
   list-style: none;
-  margin-left: 1em;
+  margin-left: 1rem;
 }
 
 .footer-social-links li {
-  margin-right: 0.5em;
+  margin-right: 0.5rem;
 }
 
 .footer-social-links a i:hover {
@@ -402,7 +364,6 @@ a:focus {
   text-decoration: none;
 }
 
-/*On Hover Color Change*/
 #go-to-top:hover {
   background-color: #7dbbf1;
 }
@@ -418,39 +379,6 @@ a:focus {
 /* Media query. Mobile first approach */
 @media only screen and (min-width: 750px) {
 
-  /* Typography */
-  
-  h1 {
-    font-size: 3rem;
-  }
-
-  h2 {
-    font-size: 2.5rem;
-  }
-
-  h3 {
-    font-size: 1.5rem;
-  }
-
-  .section {
-    font-size: var(--fs-500);
-  }
-
-  .header .nav ul {
-    font-size: var(--fs-400);
-  }
-
-  .header .nav a {
-    padding: 0.55em;
-  }
-
-  .about {
-    padding: 6em 5em 10em 5em;
-  }
-
-  .about__body p {
-  }
-
   .projects {
     flex-direction: row;
     flex-wrap: wrap;
@@ -461,28 +389,21 @@ a:focus {
     flex-basis: 45%;
   }
 
-  .contact {
-    padding-top: 5em;
-  }
-
   .contact__body {
     flex-direction: row;
     align-items: top;
   }
   
-  .contact__policy {
-    margin-top: 2.5em;
-  }
 
   .form-control {
-    font-size: 1em;
+    font-size: 1rem;
   }
  
   button {
-    border-radius: 0.25em;
-    font-size: 1em;
+    border-radius: 0.25rem;
+    font-size: 1rem;
   }
-   
+
   .footer {
     flex-direction: row;
   }
