@@ -57,7 +57,7 @@ html {
 
 body {
   font-family: var(--ff-text);
-  /* background: linear-gradient(to right, #b4ab8f, #DFDFCA); */
+  background: linear-gradient(45deg, #e7e1cca4, #f6f6f2);
   font-weight: 400;
   line-height: 1.75;
 }
@@ -110,11 +110,6 @@ small, .text_small {
 	font-family: var(--ff-title);
   font-size: var(--fs-title);
   padding: 1rem;
-}
-
-.topick-accent {
-  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.5);
-  padding: 0.75rem;
 }
 
 /* Navigation */
@@ -184,8 +179,14 @@ a:focus {
 }
 
 .project {
+  border-style: solid;
+  border-width: 1px;
   border-radius: 5px;
   transform-origin: center;
+}
+
+.project:hover {
+  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.5);
 }
 
 .project__title {
