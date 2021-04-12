@@ -250,6 +250,7 @@ a:focus {
 
 .form-message {
   font-size: 1.4rem;
+  resize: none;
   width: 80%;
   margin: 1rem;
 }
